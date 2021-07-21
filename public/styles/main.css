@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}

@@ -9,12 +9,16 @@ const PostDB = require(`./models/post_model`)
 const app = express();
 
 // SECTION: Configuration // 
+app.set('view engine', 'ejs');
 const PORT = 4000; // <--- system level configuration variables 
 
 // SECTION: Middleware //
 
 // Access body data
 app.use(express.urlencoded ({extended: true}));
+
+// Public static server
+app.use(express.static('public'));
 
 
 // SECTION: Routes //
@@ -26,7 +30,11 @@ app.get('/', (req, res) => {
 
 // NOTE: Index GET / - Presentational
 app.get('/posts', (req, res) => {
-    res.send('Post index.');
+    const context = {
+        posts: PostDB.find(),
+        title: "Your Feed",
+    };
+    return res.render("posts/index", context);
 }); 
 
 

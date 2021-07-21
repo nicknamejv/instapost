@@ -159,9 +159,8 @@ module.exports = new Collection (Post, [{
     
 	user: {
 		username: "Super Cool Coder Person",
-		avatar: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.stockio.com%2Ffree-icon%2Fbatman-2&psig=AOvVaw3KpdVYIalE_tAiJ4WXohlQ&ust=1626993635386000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMDcj-Gd9fECFQAAAAAdAAAAABAD",
+		avatar: "https://findicons.com/files/icons/1293/the_batman_vol_1/128/batman.png",
 	},
-	image: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fbatman.fandom.com%2Fwiki%2FBatman&psig=AOvVaw0XNAp93zGR3JpFnqaUDA2I&ust=1626993632025000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCIi90Oid9fECFQAAAAAdAAAAABAD",
-	content: "Doing some code and chill with Damian",
+	image: "https://findicons.com/files/icons/604/batman_begins/128/batman.png",
 	isPrivate: false,
 }]);
