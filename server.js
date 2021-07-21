@@ -72,7 +72,13 @@ app.put(`/posts/:id`, (req, res) => {
 
 
 // NOTE: Destroy DELETE /posts/:id - Functional 
-
+app.delete(`/posts/:id`, (req, res) => {
+    // echo id 
+    res.send({
+        message: "Hit the delete route",
+        id: req.params.id,
+    });
+});
 
 
 
