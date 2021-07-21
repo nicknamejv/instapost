@@ -25,17 +25,41 @@ app.get('/posts', (req, res) => {
     res.send('Post index.');
 }); 
 
+
 // NOTE: New  GET /posts - Presentational FORM 
+app.get('/posts/new', (req, res) => {
+    res.send('Post create page.');
+}); 
+
 
 // NOTE: Create POST /posts - Functional
 
+
+
+
 // NOTE: Show GET /posts/:id - Presentational
+app.get('/posts/:id', (req, res) => {
+    // echo param.id
+    res.send(`Post show page id: ${req.params.id}`);
+}); 
+
 
 // NOTE: Edit GET /posts/:id/edit - Presentational FORM
+app.get('/posts/:id/edit', (req, res) => {
+    // echo param.id
+    res.send(`Post edit page id: ${req.params.id}`);
+}); 
+
 
 // NOTE: Update PUT /posts/:id - Functional
 
+
+
 // NOTE: Destroy DELETE /posts/:id - Functional 
+
+
+
+
 
 
 // SECTION: Sever Bind //
