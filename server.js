@@ -1,4 +1,5 @@
 // SECTION: External Modules //
+const { response } = require('express');
 const express = require('express');
 
 // SECTION: Internal Modules //
@@ -11,6 +12,9 @@ const app = express();
 const PORT = 4000; // <--- system level configuration variables 
 
 // SECTION: Middleware //
+
+// Access body data
+app.use(express.urlencoded ({extended: true}));
 
 
 // SECTION: Routes //
@@ -33,8 +37,13 @@ app.get('/posts/new', (req, res) => {
 
 
 // NOTE: Create POST /posts - Functional
-
-
+app.post(`/posts`, (req, res) => {
+    // echo
+    res.send({
+        message: "Hit the create route",
+        body: req.body,
+    });
+});
 
 
 // NOTE: Show GET /posts/:id - Presentational
@@ -66,4 +75,3 @@ app.get('/posts/:id/edit', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Instapost is live at port ${PORT} and ready to "borrow" your personal data.`);
 });
-
