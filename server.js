@@ -3,7 +3,7 @@ const { response } = require('express');
 const express = require('express');
 
 // SECTION: Internal Modules //
-
+const PostDB = require(`./models/post_model`)
 
 // SECTION: Instance Modules //
 const app = express();
