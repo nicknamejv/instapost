@@ -3,8 +3,12 @@
 }
 
 body {
-    background-color: black;
+    background-color: red;
     color: whitesmoke;
     margin: 0;
     padding: 0;
+}
+
+form {
+    display: grid;
 }

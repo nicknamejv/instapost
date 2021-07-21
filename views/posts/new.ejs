@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css"/>
+    <title>Instaposts</title>
+</head>
+<body>
+    <form action="/posts" method="POST">
+        <input type="text" name="image" placeholder ="image" id=""/>
+
+        <textarea 
+        name="content" 
+        id="" 
+        cols="30" 
+        rows="10" 
+        placeholder="Tell me about your posts"
+        ></textarea>
+
+        <input type="text" name="username" placeholder ="username" id=""/>
+        <input type="text" name="avatar" placeholder ="avatar" id=""/>
+
+        <input type="submit" value="Create Post"/>
+    </form>
+</body>
+</html>

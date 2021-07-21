@@ -40,16 +40,26 @@ app.get('/posts', (req, res) => {
 
 // NOTE: New  GET /posts - Presentational FORM 
 app.get('/posts/new', (req, res) => {
-    res.send('Post create page.');
+    res.render('posts/new');
 }); 
 
 
 // NOTE: Create POST /posts - Functional
 app.post(`/posts`, (req, res) => {
-    // echo
-    res.send({
-        message: "Hit the create route",
-        body: req.body,
+    const newPost = {
+        user: {
+            username: req.body.username,
+            avatar: req.body.avatar,
+        },
+        content: req.body.content,
+        image: req.body.image,
+        isPrivate: false,
+    };
+    PostDB.create(newPost, (error, createdPost) => {
+        if (error) {
+            return res.send(error);
+        }
+        return res.redirect('/posts');
     });
 });
 
